@@ -44,10 +44,7 @@ def submit():
     return render_template('result.html', result=res, mycolor=color)
 @app.route('/')
 def hello_world():
-    return render_template('dan/webspeechdemo.html')
+    return render_template('index.html')
 
-@app.route('/.well-known/.well-known/acme-challenge/zKrpj-P9_MzEv2LdM5bdIT9WzKTUlvBjrnnU51o5kYg')
-def ssl():
-    return render_template('zKrpj-P9_MzEv2LdM5bdIT9WzKTUlvBjrnnU51o5kYg')
 if __name__ == '__main__':
-    app.run(debug=True,ssl_context ='adhoc')
+    app.run(debug=True)
